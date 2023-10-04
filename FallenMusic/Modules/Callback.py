@@ -46,7 +46,7 @@ async def admin_risghts(_, CallbackQuery):
         await music_off(chat_id)
         await Fallen.pytgcalls.pause_stream(chat_id)
         await CallbackQuery.message.reply_text(
-            f"➻ **sᴛʀᴇᴀᴍ ᴩᴀᴜsᴇᴅ** ☁️\n│ \n└ʙʏ : {CallbackQuery.from_user.first_name} 🥀",
+            f"➻ **sᴛʀᴇᴀᴍ ᴩᴀᴜsᴇᴅ** ☁️\n│ \n└ʙʏ : {CallbackQuery.from_user.first_name} 🔮",
             reply_markup=audio_markup,
         )
         await CallbackQuery.answer("» sᴛʀᴇᴀᴍ ᴩᴀᴜsᴇᴅ.")
@@ -58,7 +58,7 @@ async def admin_risghts(_, CallbackQuery):
         await music_on(chat_id)
         await Fallen.pytgcalls.resume_stream(chat_id)
         await CallbackQuery.message.reply_text(
-            f"➻ **sᴛʀᴇᴀᴍ ʀᴇsᴜᴍᴇᴅ** ✨\n│ \n└ʙʏ : {CallbackQuery.from_user.first_name} 🥀",
+            f"➻ **sᴛʀᴇᴀᴍ ʀᴇsᴜᴍᴇᴅ** ✨\n│ \n└ʙʏ : {CallbackQuery.from_user.first_name} 🔮",
             reply_markup=audio_markup,
         )
         await CallbackQuery.answer("» sᴛʀᴇᴀᴍ ʀᴇsᴜᴍᴇᴅ.")
@@ -70,7 +70,7 @@ async def admin_risghts(_, CallbackQuery):
         await remove_active_chat(chat_id)
         await Fallen.pytgcalls.leave_group_call(chat_id)
         await CallbackQuery.message.reply_text(
-            f"➻ **sᴛʀᴇᴀᴍ ᴇɴᴅᴇᴅ/sᴛᴏᴩᴩᴇᴅ** ❄\n│ \n└ʙʏ : {CallbackQuery.from_user.first_name} 🥀",
+            f"➻ **sᴛʀᴇᴀᴍ ᴇɴᴅᴇᴅ/sᴛᴏᴩᴩᴇᴅ** ❄\n│ \n└ʙʏ : {CallbackQuery.from_user.first_name} 🔮",
             reply_markup=close_key,
         )
         await CallbackQuery.message.delete()
@@ -80,7 +80,7 @@ async def admin_risghts(_, CallbackQuery):
         if Queues.is_empty(chat_id):
             await remove_active_chat(chat_id)
             await CallbackQuery.message.reply_text(
-                f"➻ **sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ** 🥺\n│ \n└ʙʏ : {CallbackQuery.from_user.first_name} 🥀\n\n» ɴᴏ ᴍᴏʀᴇ ǫᴜᴇᴜᴇᴅ ᴛʀᴀᴄᴋs ɪɴ {CallbackQuery.message.chat.title}, **ʟᴇᴀᴠɪɴɢ ᴠɪᴅᴇᴏᴄʜᴀᴛ.**",
+                f"➻ **sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ** 🥺\n│ \n└ʙʏ : {CallbackQuery.from_user.first_name} 🔮\n\n» ɴᴏ ᴍᴏʀᴇ ǫᴜᴇᴜᴇᴅ ᴛʀᴀᴄᴋs ɪɴ {CallbackQuery.message.chat.title}, **ʟᴇᴀᴠɪɴɢ ᴠɪᴅᴇᴏᴄʜᴀᴛ.**",
               reply_markup=close_key,
             )
             await Fallen.pytgcalls.leave_group_call(chat_id)
@@ -102,7 +102,7 @@ async def admin_risghts(_, CallbackQuery):
                     "sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ..."
                 )
                 mystic = await CallbackQuery.message.reply_text(
-                    f"**ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ɴᴇxᴛ ᴛʀᴀᴄᴋ ғʀᴏᴍ ᴩʟᴀʏʟɪsᴛ...\n\nsᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ ʙʏ  {CallbackQuery.from_user.mention} !**🥀"
+                    f"**ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ɴᴇxᴛ ᴛʀᴀᴄᴋ ғʀᴏᴍ ᴩʟᴀʏʟɪsᴛ...\n\nsᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ ʙʏ  {CallbackQuery.from_user.mention} !**🔮"
                 )
                 (
                     title,
@@ -137,7 +137,7 @@ async def admin_risghts(_, CallbackQuery):
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
                     caption=(
-                        f"<b>➻ sᴛᴀʀᴛᴇᴅ sᴛʀᴇᴀᴍɪɴɢ</b>\n\n<b>✨ ᴛɪᴛʟᴇ :</b> [{title[:40]}](https://www.youtube.com/watch?v={videoid})\n☁ <b>ᴅᴜʀᴀᴛɪᴏɴ :</b> {duration_min} ᴍɪɴᴜᴛᴇs\n🥀 <b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {mention}"
+                        f"<b>➻ sᴛᴀʀᴛᴇᴅ sᴛʀᴇᴀᴍɪɴɢ</b>\n\n<b>✨ ᴛɪᴛʟᴇ :</b> [{title[:40]}](https://www.youtube.com/watch?v={videoid})\n☁ <b>ᴅᴜʀᴀᴛɪᴏɴ :</b> {duration_min} ᴍɪɴᴜᴛᴇs\n🔮 <b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {mention}"
                     ),
                 )
                 os.remove(thumb)
@@ -181,7 +181,7 @@ async def admin_risghts(_, CallbackQuery):
                 final_output = await CallbackQuery.message.reply_photo(
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
-                    caption=f"<b>➻ sᴛᴀʀᴛᴇᴅ sᴛʀᴇᴀᴍɪɴɢ</b>\n\n<b>✨ ᴛɪᴛʟᴇ :</b> {title[:40]}\n☁ <b>ᴅᴜʀᴀᴛɪᴏɴ :</b> {duration_min} ᴍɪɴᴜᴛᴇs\n🥀 <b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {mention}",
+                    caption=f"<b>➻ sᴛᴀʀᴛᴇᴅ sᴛʀᴇᴀᴍɪɴɢ</b>\n\n<b>✨ ᴛɪᴛʟᴇ :</b> {title[:40]}\n☁ <b>ᴅᴜʀᴀᴛɪᴏɴ :</b> {duration_min} ᴍɪɴᴜᴛᴇs\n🔮 <b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {mention}",
                 )
 
 
