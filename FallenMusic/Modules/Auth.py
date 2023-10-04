@@ -140,7 +140,7 @@ async def authusers(_, message: Message):
         m = await message.reply_text(
             "**» ɢᴇᴛᴛɪɴɢ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ ғʀᴏᴍ ᴍᴏɴɢᴏᴅʙ...**"
         )
-        msg = "**🥀 ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴜsᴇʀs ʟɪsᴛ :**\n\n"
+        msg = "**🔮 ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴜsᴇʀs ʟɪsᴛ :**\n\n"
         for note in _playlist:
             _note = await get_authuser(message.chat.id, note)
             user_id = _note["auth_user_id"]
