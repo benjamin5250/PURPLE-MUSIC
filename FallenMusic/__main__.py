@@ -168,7 +168,7 @@ async def start_command(_, message):
 📎**ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ :** [ᴠɪsɪᴛ ᴄʜᴀɴɴᴇʟ]({channellink})
 🔗**ᴠɪᴅᴇᴏ ʟɪɴᴋ :** [ᴠɪsɪᴛ ᴏɴ ʏᴏᴜᴛᴜʙᴇ]({link})
 
- sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME} 🥀"""
+ sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME} 🔮"""
             key = InlineKeyboardMarkup(
                 [
                     [
@@ -176,7 +176,7 @@ async def start_command(_, message):
                             text="☁ ʏᴏᴜᴛᴜʙᴇ ☁", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="🥀 sᴜᴩᴩᴏʀᴛ 🥀", url=config.SUPPORT_CHAT
+                            text="🔮 sᴜᴩᴩᴏʀᴛ 🔮", url=config.SUPPORT_CHAT
                         ),
                     ],
                 ]
@@ -204,7 +204,7 @@ async def start_command(_, message):
                     text="❄ ʜᴇʟᴩ ❄", callback_data="fallen_help"
                 ),
                 InlineKeyboardButton(
-                    text="🥀 ᴏᴡɴᴇʀ 🥀", user_id=F_OWNER
+                    text="🔮 ᴏᴡɴᴇʀ 🔮", user_id=F_OWNER
                 )
             ],
             [
@@ -242,7 +242,7 @@ async def fallen_home(_, CallbackQuery):
                     text="❄ ʜᴇʟᴩ ❄", callback_data="fallen_help"
                 ),
                 InlineKeyboardButton(
-                    text="🥀 ᴏᴡɴᴇʀ 🥀", user_id=F_OWNER
+                    text="🔮 ᴏᴡɴᴇʀ 🔮", user_id=F_OWNER
                 )
             ],
             [
