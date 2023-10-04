@@ -61,11 +61,11 @@ async def auth(_, message: Message):
             }
             await save_authuser(message.chat.id, token, assis)
             await message.reply_text(
-                f"**» sᴜᴄᴄᴇssғᴜʟʟʏ ᴀᴅᴅᴇᴅ {user.first_name} ᴛᴏ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴩ.**"
+                f"**»  {user.first_name} အား VC Authorised User List ထဲသို့ထည့်သွင်းပြီးပါပြီ 🔮.**"
             )
             return
         else:
-            await message.reply_text(f"**» {user.first_name} ɪs ᴀʟʀᴇᴀᴅʏ ɪɴ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ.**")
+            await message.reply_text(f"**» {user.first_name} သည် ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ ထဲတွင်ရှိနှင့်ပြီးသားဖြစ်ပါသည်🔮.**")
         return
     from_user_id = message.from_user.id
     user_id = message.reply_to_message.from_user.id
@@ -89,11 +89,11 @@ async def auth(_, message: Message):
         }
         await save_authuser(message.chat.id, token, assis)
         await message.reply_text(
-            f"**» sᴜᴄᴄᴇssғᴜʟʟʏ ᴀᴅᴅᴇᴅ {user_name} ᴛᴏ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴩ.**"
+            f"**» {user_name} အား VC Authorised User List ထဲသို့ထည့်သွင်းပြီးပါပြီ 🔮 .**"
         )
         return
     else:
-        await message.reply_text(f"**» {user_name} ɪs ᴀʟʀᴇᴀᴅʏ ɪɴ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ.**")
+        await message.reply_text(f"**» {user_name} သည် ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ ထဲတွင်ရှိနှင့်ပြီးသားဖြစ်ပါသည်🔮**")
 
 
 @app.on_message(filters.command("unauth") & filters.group)
@@ -113,7 +113,7 @@ async def unauth_fe(_, message: Message):
         deleted = await delete_authuser(message.chat.id, token)
         if deleted:
             return await message.reply_text(
-                f"**» ʀᴇᴍᴏᴠᴇᴅ {user.first_name} ғʀᴏᴍ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴩ.**"
+                f"**» {user.first_name} ғʀᴏᴍ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴩ.**"
             )
         else:
             return await message.reply_text("**» ɴᴏᴛ ɪɴ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ.**")
@@ -122,7 +122,7 @@ async def unauth_fe(_, message: Message):
     deleted = await delete_authuser(message.chat.id, token)
     if deleted:
         return await message.reply_text(
-            f"**» ʀᴇᴍᴏᴠᴇᴅ {message.reply_to_message.from_user.first_name} ғʀᴏᴍ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴩ.**"
+            f"**»  {message.reply_to_message.from_user.first_name} အား ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛမှထုတ်ပယ်ပြီးပါပြီ 🔮.**"
         )
     else:
         return await message.reply_text("**» ɴᴏᴛ ɪɴ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ.**")
@@ -154,5 +154,5 @@ async def authusers(_, message: Message):
             except Exception:
                 continue
             msg += f"{j}➤ {user}[`{user_id}`]\n"
-            msg += f"    ┗ ᴀᴅᴅᴇᴅ ʙʏ : {admin_name}[`{admin_id}`]\n\n"
+            msg += f"    ┗ ᴀᴅᴅᴇᴅ ʙʏ : Unknown\n"
         await m.edit_text(msg)
