@@ -33,7 +33,7 @@ __HELP__ = """
 @app.on_message(filters.command(["sudolist", "listsudo", "sudo", "owner"]))
 async def sudoers_list(_, message: Message):
     sudoers = SUDO_USERS
-    text = "<u>🥀 **ᴏᴡɴᴇʀ :**</u>\n"
+    text = "<u>🔮 **ᴏᴡɴᴇʀ :**</u>\n"
     wtf = 0
     for x in OWNER_ID:
         try:
